@@ -1,4 +1,7 @@
-
+import static org.junit.Assert.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * A car has a certain fuel efficancy and a certain amount 
@@ -23,7 +26,7 @@ public class Car
     {
         // initialise instance variables
         fuelE = fuelE;
-;
+
     }
 
     /**
@@ -34,8 +37,36 @@ public class Car
      */
     public void drive(double distance)
     {
-        // put your code here
+        fuelTank-=distance/fuelE;
 
+    }
+
+
+    /**
+     * returns amount of gas in the car's tank in units of gallons
+
+     * @returns amount of gas in the car's tank in units of gallons
+     */
+    public double getGasInTank()
+    {
+        // put your code here
+        return fuelTank;
+    }
+
+
+    /**
+     * Increments the fuel in the cars tank by the specified amount in gallons
+     *
+     * @pre     preconditions for the method
+     *          (what the method assumes about the method's parameters and class's state)
+     * @post    postconditions for the method
+     *          (what the method guarantees upon completion)
+     * @param   y   description of parameter y
+     * @return  description of the return value
+     */
+    public void addGas(double gallonsOfGas)
+    {
+        fuelTank+=gallonsOfGas;
     }
 
 }
