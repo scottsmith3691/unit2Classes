@@ -25,7 +25,8 @@ public class Car
     public Car(double fuelE)
     {
         // initialise instance variables
-        fuelE = fuelE;
+        this.fuelE = fuelE;
+        fuelTank=0;
 
     }
 
@@ -67,6 +68,7 @@ public class Car
     public void addGas(double gallonsOfGas)
     {
         fuelTank+=gallonsOfGas;
+        
     }
 
 }
