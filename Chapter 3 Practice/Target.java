@@ -1,10 +1,11 @@
-
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 
 /**
  * Write a description of class Target here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Scott Smith
+ * @9/23/2015
  */
 public class Target
 {
@@ -14,7 +15,7 @@ public class Target
     /**
      * Default constructor for objects of class Target
      */
-    public Target()
+    public TargetViewer()
     {
         // initialise instance variables
         x = 0;
