@@ -44,15 +44,20 @@ public class House
         g2.drawLine((xLeft+230),(yTop+75),(xLeft+230),((yTop+75)+60));
         g2.drawLine((xLeft+200),(yTop+105),(xLeft+260),(yTop+105));
         
-        g2.drawLine(xLeft,yTop,(xLeft+172),(yTop-55));
-        g2.drawLine((xLeft+325),yTop,(xLeft+170),(yTop-55));
+        
         
         g2.drawLine(0,420,800,420);
         
-        g2.draw(base);
-        g2.draw(door);
-        g2.draw(window1);
-        g2.draw(window2);
+        g2.setColor(Color.RED);
+        g2.fill(base);
+        g2.setColor(new Color(165, 42, 42));
+        g2.fill(door);
+        g2.setColor(new Color(128, 128, 255));
+        g2.fill(window1);
+        g2.fill(window2);
+        
+        g2.drawLine(xLeft,yTop,(xLeft+172),(yTop-55));
+        g2.drawLine((xLeft+325),yTop,(xLeft+170),(yTop-55));
     }
 
 }

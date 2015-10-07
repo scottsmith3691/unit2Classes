@@ -14,6 +14,7 @@ public class CityscapeComponent extends JComponent
 {
     // define the objects in your Cityscape as instance variables
     // ...
+    private Sky sky;
     private House house;
     int xAxis;
         int yAxis;
@@ -22,6 +23,8 @@ public class CityscapeComponent extends JComponent
     
     public CityscapeComponent(int xAxis, int yAxis)
     {
+        house = new House(xAxis, yAxis);
+        sky = new Sky();
         this.xAxis=xAxis;
         this.yAxis=yAxis;
     }
@@ -38,8 +41,9 @@ public class CityscapeComponent extends JComponent
     public void paintComponent(Graphics g)
     {
         
-        House house = new House(xAxis, yAxis);
+        
         Graphics2D g2 = (Graphics2D) g;
+        sky.draw(g2);
         house.draw(g2);
         
         

@@ -28,11 +28,11 @@ public class CityscapeViewer
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
         // ... Scanner input= new Scanner(System.in);
     Scanner input= new Scanner(System.in);
-    System.out.print("What would you like the x axis of the house to be: ");
+    System.out.print("What would you like the x axis of the house to be (0-465): ");
     
     int xAxis = input.nextInt();
     
-    System.out.print("What would you like the y axis of the house to be: ");
+    System.out.print("What would you like the y axis of the house to be (130-280): ");
     int yAxis = input.nextInt();
         
         
