@@ -16,6 +16,7 @@ public class CityscapeComponent extends JComponent
     // ...
     private Sky sky;
     private House house;
+    private Tree trees;
     int xAxis;
         int yAxis;
     // define the CityscapeComponent contructor and intiailize all instance variables
@@ -25,6 +26,7 @@ public class CityscapeComponent extends JComponent
     {
         house = new House(xAxis, yAxis);
         sky = new Sky();
+        trees = new Tree();
         this.xAxis=xAxis;
         this.yAxis=yAxis;
     }
@@ -45,6 +47,7 @@ public class CityscapeComponent extends JComponent
         Graphics2D g2 = (Graphics2D) g;
         sky.draw(g2);
         house.draw(g2);
+        trees.draw(g2);
         
         
     }
@@ -57,7 +60,7 @@ public class CityscapeComponent extends JComponent
     {
         // update the objects in the cityscape so they are animated
         // ...
-        
+        //not necesary
         
         
         // request that the Java Runtime repaints this component by invoking its paintComponent method

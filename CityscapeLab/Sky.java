@@ -1,10 +1,10 @@
 import java.awt.geom.*;
 import java.awt.*;
 /**
- * Write a description of class Sky here.
+ * Creates a moon, sun, and changing atmosphere
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Scott Smith
+ * @version 10/11/2015
  */
 public class Sky
 {
@@ -12,32 +12,24 @@ public class Sky
     private Ellipse2D.Double sun;
     private int frames;
     private boolean hasSun = true;
-    /**
-     * Default constructor for objects of class Sky
-     */
+   
     public Sky()
     {
         // initialise instance variables
-        
+        //none neccesary
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * Creates an object, represented as the sun if orange or the moon if grey, that drags across the sky and changes the color of the sky
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @post    an effect of night and day in the background
      */
     public void draw(Graphics2D g2)
     {
         
         
-        sun = new Ellipse2D.Double(30*frames,20,50,50);
-        if(30*frames > 800){
+        sun = new Ellipse2D.Double(80*frames,20,60,60);
+        if(80*frames > 800){
             frames = -2;
             hasSun = !hasSun;
         }
